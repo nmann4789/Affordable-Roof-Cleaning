@@ -1,0 +1,457 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html {
+  color: #222;
+  font-size: 10px;
+  line-height: 1.4;
+  overflow-x: hidden;
+  max-width: 100%;
+  box-sizing:border-box; }
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; 
+  max-width: 100%;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical; }
+
+a:hover{
+  color: white;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Hamburger Menu
+   ========================================================================== */
+
+  .hamburger-icon {
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 40px;
+    height: 50px;
+    position: relative;
+    display: none;
+    margin: 0 auto;
+    padding-top:22px;
+  }
+  .hamburger-icon > .line {
+    display: block;
+    background: #fafafa;
+    width: 40px;
+    height: 4px;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 5px;
+    transition: all 0.4s ease-in;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+  }
+  .hamburger-icon > .line:nth-child(1) {
+    margin-bottom: 8px;
+  }
+  .hamburger-icon > .line:nth-child(3) {
+    margin-top: 8px;
+  }
+  .hamburger-icon:hover .line:nth-child(1), .hamburger-icon:focus .line:nth-child(1) {
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+  }
+  .hamburger-icon:hover .line:nth-child(3), .hamburger-icon:focus .line:nth-child(3) {
+    transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+  }
+  .hamburger-icon:active .line:nth-child(1) {
+    transform: translateY(13px) translateX(0) rotate(45deg);
+    -webkit-transform: translateY(13px) translateX(0) rotate(45deg);
+    -moz-transform: translateY(13px) translateX(0) rotate(45deg);
+  }
+  .hamburger-icon:active .line:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-icon:active .line:nth-child(3) {
+    transform: translateY(-12px) translateX(0) rotate(-45deg);
+    -webkit-transform: translateY(-12px) translateX(0) rotate(-45deg);
+    -moz-transform: translateY(-12px) translateX(0) rotate(-45deg);
+  }
+  .hamburger-icon.active .line:nth-child(1) {
+    transform: translateY(12px) translateX(0) rotate(45deg);
+    -webkit-transform: translateY(12px) translateX(0) rotate(45deg);
+    -moz-transform: translateY(12px) translateX(0) rotate(45deg);
+  }
+  .hamburger-icon.active .line:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-icon.active .line:nth-child(3) {
+    transform: translateY(-12px) translateX(0) rotate(-45deg);
+    -webkit-transform: translateY(-12px) translateX(0) rotate(-45deg);
+    -moz-transform: translateY(-12px) translateX(0) rotate(-45deg);
+  }
+
+.row>div{
+  padding:0;
+}
+
+
+/* ==========================================================================
+   CUSTOM CSS
+   ========================================================================== */
+
+/* Navigation */
+
+header{
+  background-color:rgba(255,255,255,0.9);
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 2;
+}
+header nav{
+  float:right;
+  margin-right:15px;
+}
+header nav ul {
+  display: flex;
+  align-items:center;
+
+  margin:0;
+}
+header nav ul li{
+  list-style-type: none;
+  padding:41px 0;
+}
+header .logo{
+  width:200px;
+  float:left;
+}
+header .logo h1{
+  font-size: 20px;
+}
+header nav a{
+  padding:20px;
+  text-transform: uppercase;
+  color:RGBA(23, 156, 82, 1.00);
+  font-weight: bold;
+  border-radius: 5px;
+}
+header nav a:hover{
+  padding:20px;
+  text-transform: uppercase;
+  color:white;
+  background-color: RGBA(23, 156, 82, 1.00);
+  font-weight: bold;
+}
+header .bbb-link{
+  padding: 3px;
+  border: 1px solid #025A78;
+  display: inline-block;
+  width: 250px;
+  border-radius: 5px;
+  margin: 12px;
+  background-color: white;
+}
+header .content{
+  padding:0;
+}
+.logo{
+  border:7px solid rgba(23, 156, 82, 1.00);
+  padding:7px;
+  background-color: white;
+  max-width: 350px;
+}
+.logo h1{
+  font-family: Impact;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  padding:15px;
+  margin:0;
+  background: rgba(23, 156, 82, 1.00);
+  color:white;
+  -webkit-text-stroke: 1px black;
+}
+.logo h2{
+  font-family: Arial;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  margin: 8px 0;
+  padding: 0 15px;
+  font-size: 26px;
+  text-transform: uppercase;
+}
+.logo p{
+  font-family: Impact;
+  text-align: center;
+  padding:15px;
+  margin:0;
+  background: rgba(23, 156, 82, 1.00);
+  color:black;
+  -webkit-text-stroke: 1px white;
+  font-size: 32px !important;
+}
+.hero{
+  padding-top:102px;
+}
+.goal{
+  padding: 30px 0;
+  background-color:rgba(231, 231, 231, 1.00)
+}
+.goal .logo-cont{
+  display: flex;
+  align-items:center;
+}
+.goal ol{
+  margin:0;
+  padding-left:15px;
+}
+.goal .logo{
+  margin:30px auto 0;
+}
+.goal p{
+  font-size: 16px;
+}
+.locations{
+  background-color:rgba(231, 231, 231, 1.00); 
+  padding-bottom:30px;
+}
+.locations h2{
+  margin:0 auto;
+  width:1170px;
+  padding:30px 0;
+  display: block;
+}
+.locations ul{
+  padding:0;
+}
+.locations li{
+  list-style-type: none;
+  font-size: 18px;
+}
+.act-now{
+  background-color:rgba(240, 240, 240, 1.00); 
+  padding:30px;
+}
+.act-now .anv-player-parent-container{
+  max-width:100%;
+}
+.act-now .reasons{
+  padding:0 20px;
+}
+.act-now .reasons li{
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom:10px;
+}
+footer{
+  background-color: rgba(231, 231, 231, 1.00);
+  padding:30px 0;
+}
+footer h3{
+  color:rgba(181, 181, 181, 1.00);
+  font-size: 18px;
+  margin:0;
+  color:black;
+}
+footer ul{
+  margin-top: 20px;
+  font-weight: bold;
+  padding:0;
+}
+footer ul li{
+  font-weight:normal;
+  list-style-type: none;
+  margin-bottom:3px;
+}
+footer ul.social-icons{
+
+}
+footer ul.social-icons li{
+  display: inline;
+}
+footer ul.social-icons li img{
+  max-width: 30px;
+}
+footer form .name span{
+  float:left;
+  width:50%;
+}
+footer form .name span:nth-child(1){
+  padding-right:10px;
+}
+footer form .phone span{
+  float:left;
+  width:33%;
+}
+footer form .phone span:nth-child(2){
+  padding-right:10px;
+}
+footer form .phone span:nth-child(3){
+  padding-right:10px;
+}
+footer iframe #header{
+  display: none;
+}
+footer input{
+  background-color: rgba(181, 181, 181, 1.00);
+  color: white;
+  outline:none;
+  margin-bottom: 10px;
+  display: block;
+  -webkit-appearance:none;
+  width:100%;
+  border:0;
+  padding:3px 7px;
+}
+footer textarea{
+  background-color: rgba(181, 181, 181, 1.00);
+  color: white;
+  outline:none;
+  margin-bottom: 10px;
+  display: block;
+  -webkit-appearance:none;
+  width:100%;
+  border:0;
+  padding:3px 7px;
+}
+textarea::-webkit-input-placeholder,input::-webkit-input-placeholder {
+color: white !important;
+}
+ 
+textarea:-moz-placeholder, input:-moz-placeholder { /* Firefox 18- */
+color: white !important;  
+}
+ 
+textarea::-moz-placeholder, input::-moz-placeholder {  /* Firefox 19+ */
+color: white !important;  
+}
+ 
+textarea:-ms-input-placeholder, input:-ms-input-placeholder {  
+color: white !important;  
+}
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+  header .bbb-link{
+    float:right;
+  }
+  header nav{
+    width: 100%;
+    clear: both;
+    float:none;
+  }
+  header nav ul{
+    padding:0;
+    justify-content:center;
+  }
+  header nav ul li{
+    padding:20px 0;
+  }
+  .hero{
+    padding-top: 162px;
+  }
+  .goal{
+    padding:30px;
+  }
+  .goal h2{
+    margin-top:0;
+  }
+  .locations{
+    padding:0 30px 30px;
+  }
+  .locations h2{
+    padding:30px 0;
+    width:auto;
+  }
+  #contact{
+    padding:30px;
+  }
+  #contact form{
+
+  }
+}
+
+@media (max-width: 640px) {
+  header{
+    position: relative;
+  }
+  .hero{
+    padding-top:0;
+  }
+}
