@@ -451,7 +451,35 @@ color: white !important;
   header{
     position: relative;
   }
+  header .logo{
+    width:100%;
+    float: none;
+    margin: 0 auto;
+  }
+  header .logo h1{
+    font-size: 16px;
+  }
+  header .bbb-link{
+    width:90%;
+    float: none;
+    margin:10px 5%;
+  }
+  header nav a{
+    padding:9px;
+  }
+  header nav ul li{
+    text-align: center;
+  }
   .hero{
     padding-top:0;
+  }
+  .logo h1{
+    -webkit-text-stroke:0px;
+  }
+  .logo p{
+    -webkit-text-stroke:0px;
+  }
+  .goal .logo-cont{
+    height:100% !important;
   }
 }
